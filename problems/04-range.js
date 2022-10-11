@@ -13,9 +13,16 @@ range(7, 6); // []
 
 function range(start, end) {
   // Your code here
+  debugger
+  let res = [];
+  if (start + 1 > end) return[];
+  res.push(start);
+  let result = [...res, ...range(start + 1, end) ];
+  debugger;
+  return result;
 }
 
-
+range(3, 4); // [3]
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = range;
